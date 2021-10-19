@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="incentro.urlredirector.URLRedirector" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Web"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>URLRedirector</name>
+    <description>Redirect immediately to a given URL in the same browser of the user or in a new browser.</description>
+    <icon>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAAEEfUpiAAAACXBIWXMAAAsSAAALEgHS3X78AAAByUlEQVRYhbVXi3HCMAx99mUAsgFsABt0hIwAk5URskHZoN2AbgATpD3loiAcWbbzeXdAYuvpyYpkE0h0Df48fU1G5S+khWrt1NmJqYTrGuwAPHjMt3BRVb5X/XcNHkGIvVdnBUByTpuQpErecIAAag68CiYY46qqmHsmeWvyzSCc5PtRQonjFYOVC5UVg+aoSmU65TS5BijKZMtVNMlziiiun5QC1YFFjC5BkM8WMXyeEwe+xRXoP1kgBzcAH2bjGciug67BN4BjMPzjI/a5ONLz/KIlKISnb/vGk1HcAezlmI+QCbuAfA7JKKhEIn+KoV92lsyBQr74FgdKIH1SpayRr0PEJzMCiyyhOsglqxGUkKH1gkUWJ8lYI9ZTmCgPewBkjWjdWLRPLu2FVwRz23luBDe+KFpvDrqm75F7rv3iHE4ctn2j1kOvJWHtRykhM3tKQ6io5ohTIywVZizugwLhC4AW6DM+ni3mdriWcLAjnAbenupldgAzhN8wFGt5BpYKh8gOYG1hRjKArYSzAzDEk8LhmxCULkvuhAPhEgi7nFWL8y+KrBoo/cdagtXPglKYr5Mb4cB7AIEyQCfXeD5vCNKopTgA/AOu49NwA6ckGwAAAABJRU5ErkJggg==</icon>
+    <properties>
+        <propertyGroup caption="General">
+            <property key="ExpressionURL" type="expression" defaultValue="'https://'">
+                <caption>URL</caption>
+                <description>The URL to redirect the page to.</description>
+                <returnType type="String" />
+            </property>
+
+            <property key="Target" type="enumeration" defaultValue="Page">
+                <caption>Target</caption>
+                <description>In what type of webpage must the URL be open.</description>
+                <enumerationValues>
+                    <enumerationValue key="Page">Same browser page</enumerationValue>
+                    <enumerationValue key="Blank">New browser page</enumerationValue>
+                </enumerationValues>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>
