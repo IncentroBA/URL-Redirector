@@ -1,11 +1,15 @@
-export default function URLRedirector({ ExpressionURL, Target }) {
-    console.info("ExpressionURL", ExpressionURL.value);
-    console.info("Target.value", Target);
+import { useEffect } from "react";
 
-    if (Target === "Page") {
-        window.location.replace(ExpressionURL.value);
-    } else {
-        window.open(ExpressionURL.value);
-    }
+export default function URLRedirector({ ExpressionURL, Target }) {
+    useEffect(() => {
+        if (ExpressionURL.status === "available") {
+            if (Target === "Page") {
+                window.location.replace(ExpressionURL.value);
+            } else {
+                window.open(ExpressionURL.value);
+            }
+        }
+    });
+
     return null;
 }

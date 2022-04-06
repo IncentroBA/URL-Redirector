@@ -1,7 +1,7 @@
 {
   "name": "urlredirector",
   "widgetName": "URLRedirector",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Redirect immediately to a given URL in the same browser of the user or in a new browser.",
   "copyright": "Incentro 2021",
   "author": "Incentro",
